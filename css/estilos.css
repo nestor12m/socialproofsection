@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Sans:ital,wght@0,500;0,700;1,400&family=Inter:wght@300;400;500;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca:wght@400;700&family=Outfit:wght@300;400;600;700&family=Poppins:wght@300&family=Quicksand:wght@300;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;1,100;1,700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+--VeryDarkMagenta: hsl(300, 43%, 22%);
+--SoftPink: hsl(333, 80%, 67%);
+--DarkGrayishMagenta: hsl(303, 10%, 53%);
+--LightGrayishMagenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "League Spartan";
+}
+
+main{
+    background-color: var(--White);
+}
+.contenedor-1{
+    /* background-color: aqua; */
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    
+    background-image: url(../img/bg-pattern-top-mobile.svg);
+}
+.contenedor-1 h1{
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: var(--VeryDarkMagenta);
+}
+.contenedor-1 p{
+    text-align: center;
+    color: var(--DarkGrayishMagenta);
+}
+/* -------------------------------------------------------------
+                        seccion numero 2
+------------------------------------------------------------- */
+.contenedor-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.item-1{
+    height: 70px;
+    width: 300px;
+    background-color: var(--LightGrayishMagenta);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img2{
+    
+    display: flex;
+    
+}
+.item-1:nth-child(3){
+    margin-bottom: 50px;
+}
+.img1{
+   margin-left: 10px;
+}
+/* -------------------------------------------------------------
+                        seccion numero 3
+------------------------------------------------------------- */
+
+.contenedores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-3{
+
+    background-color: var(--VeryDarkMagenta);
+    margin-bottom:10px;
+    height: 230px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+}
+.contenedor-3 img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    
+}
+.uno {
+    display: flex;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.uno h2{
+    color: var(--White);
+    font-size: 13px;
+}
+.uno p{
+    color: var(--SoftPink);
+    font-size: 13px;
+    
+}
+.dos{
+    margin-left: 20px;
+    text-align: start;
+}
+.p1{
+    margin-left: 25px;
+    padding-right: 45px;
+    color: var(--White);
+    font-size: 15px;
+     font-family: "League Spartan";
+     line-height: 20px;
+}
+
+.footer{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* -------------------------------------------------------------
+                      MEDIA QUERIS
+------------------------------------------------------------- */
+
+@media(min-width:900px){
+
+   
+    main{
+        
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(12,45px);
+        background-image: url(../img/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+    }
+
+    .cont1:nth-child(1){
+        grid-column: 2/5;
+        grid-row: 2/5;
+        margin-left: 100px;
+    }
+    .cont1:nth-child(2){
+        grid-column: 6/10;
+        grid-row: 2/6;
+        display: grid;
+        grid-template-columns: repeat(12,32px);
+        grid-template-rows: repeat(12,30px);
+       
+        
+    }
+    .cont1:nth-child(3){
+        grid-column: 3/10;
+        grid-row: 8/12;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(9,25px);
+        gap: 0 19px;
+        margin-top: 40px;
+       
+    }
+    .item-1{
+        height: 40px;
+        width: 390px;
+        margin-top: 0px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .item-1:nth-child(1){
+        grid-column: 2/9;
+        grid-row: 3/4;
+    }
+    .item-1:nth-child(2){
+        grid-column: 3/10;
+        grid-row: 5/6;
+    }
+    .item-1:nth-child(3){
+        grid-column: 4/11;
+        grid-row: 7/8;
+        margin-bottom: 0px;
+    }
+    .contenedor-1{
+        height: 250px;
+        width: 370px;
+        margin-bottom:0px;
+        background-image: none;
+       
+    }
+    .contenedor-1 p{
+        text-align:start;
+    }
+    .contenedor-3{
+       height: 220px;
+    }
+    .contenedor-3:nth-child(1){
+        grid-column: 2/5;
+        grid-row: 1/7;
+    }
+    .contenedor-3:nth-child(2){
+        grid-column: 5/9;
+        grid-row: 2/8;
+        margin-bottom: 30px;
+    }
+    .contenedor-3:nth-child(3){
+        grid-column: 9/12;
+        grid-row: 3/9;
+        margin-bottom: 49px;
+    }
+    .footer{
+        margin-top: 30px;
+    }
+}
